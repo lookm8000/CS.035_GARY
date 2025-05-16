@@ -43,17 +43,27 @@
       border: none;
     }
 
-    .group-photo-wrapper {
+    .team-contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      margin: 3rem auto;
+      max-width: 1100px;
+    }
+
+    .group-photo-wrapper, .contact-card {
+      flex: 1 1 45%;
       background-color: #252a40;
       padding: 2rem;
       border-radius: 16px;
-      max-width: 640px;
-      margin: 3rem auto;
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
       border: 2px solid #5865f2;
     }
 
-    .group-photo-wrapper h2 {
+    .group-photo-wrapper h2,
+    .contact-card h2,
+    .bio-card h3 {
       text-align: center;
       color: #a5b4fc;
       margin-bottom: 1rem;
@@ -64,6 +74,28 @@
       width: 100%;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .bio-card {
+      background-color: #1f253a;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .bio-card a {
+      display: block;
+      color: #93c5fd;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .bio-card p {
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      text-align: center;
     }
   </style>
 </head>
@@ -90,7 +122,7 @@
   </nav>
 
   <header class="hero">
-    <h1>GARY</h1>
+    <h1>G.A.R.Y.</h1>
     <p>Generative AI Reviewer for You – Breaking Barriers in Traditional Learning</p>
   </header>
 
@@ -111,7 +143,7 @@
     </section>
 
     <section class="card" id="tech">
-      <h2>🛠️ Technical Implementation</h2>
+      <h2> Technical Implementation</h2>
       <ul>
         <li><strong>Frontend:</strong> React, HTML/CSS</li>
         <li><strong>Backend:</strong> Python, FastAPI, LangChain</li>
@@ -138,25 +170,51 @@
         Your browser does not support the video tag.
       </video>
     </section>
-
-    <section class="card" id="contact">
-      <h2>📞 Contact Us</h2>
-      <p>Steve Akiyama – <a href="mailto:akiyamas@oregonstate.edu">akiyamas@oregonstate.edu</a></p>
-      <p>Maile Look – <a href="mailto:lookm@oregonstate.edu">lookm@oregonstate.edu</a></p>
-      <p>Varsha Narayan – <a href="mailto:narayava@oregonstate.edu">narayava@oregonstate.edu</a></p>
-      <p>Grant O’Connor – <a href="mailto:oconnorg@oregonstate.edu">oconnorg@oregonstate.edu</a></p>
-    </section>
-
-    <section class="card">
-      <h2>Acknowledgments</h2>
-      <p>Special thanks to our mentor Joe Slade for his guidance and vision, and the OSU EECS Department for their ongoing support.</p>
-    </section>
   </main>
 
-  <div class="group-photo-wrapper">
-    <h2> Meet the Team</h2>
-    <img src="group_photo.jpeg" alt="Group Photo" class="group-photo" />
+  <div class="team-contact-wrapper">
+    <div class="group-photo-wrapper">
+      <h2> Meet the Team</h2>
+      <img src="group_photo.jpeg" alt="Group Photo" class="group-photo" />
+    </div>
+
+    <div class="contact-card" id="contact">
+      <h2>📞 Contact Us</h2>
+
+      <div class="bio-card">
+        <h3>Maile Look</h3>
+        <p>BS Computer Science major, Business Information Systems minor, graduating June 2025.</p>
+        <a href="mailto:lookm@oregonstate.edu">lookm@oregonstate.edu</a>
+        <a href="https://www.linkedin.com/in/maile-look/" target="_blank">LinkedIn</a>
+      </div>
+
+      <div class="bio-card">
+        <h3>Steve Akiyama</h3>
+        <p>BS Computer Science major (AI Focus), graduating June 2025.</p>
+        <a href="mailto:akiyamas@oregonstate.edu">akiyamas@oregonstate.edu</a>
+        <a href="https://www.linkedin.com/in/steven-akiyama-64783124a/" target="_blank">LinkedIn</a>
+      </div>
+
+      <div class="bio-card">
+        <h3>Grant O’Connor</h3>
+        <p>MS/BS Computer Science major (AI Focus), graduating 2027.</p>
+        <a href="mailto:oconnorg@oregonstate.edu">oconnorg@oregonstate.edu</a>
+        <a href="https://www.linkedin.com/in/grant-o-connor-10b03826a/" target="_blank">LinkedIn</a>
+      </div>
+
+      <div class="bio-card">
+        <h3>Varsha Narayan</h3>
+        <p>BS Computer Science major (Systems Option), graduating June 2026.</p>
+        <a href="mailto:narayava@oregonstate.edu">narayava@oregonstate.edu</a>
+        <a href="https://www.linkedin.com/in/varsha-narayan-9002a6284/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
   </div>
+
+  <section class="card">
+    <h2>Acknowledgments</h2>
+    <p>Special thanks to our mentor Joe Slade for his guidance and vision, and the OSU EECS Department for their ongoing support.</p>
+  </section>
 
   <footer>
     <p>© 2025 GARY Project – Oregon State University</p>
