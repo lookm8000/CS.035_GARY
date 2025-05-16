@@ -2,13 +2,13 @@ body {
   font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #121826;
+  background-color: #1a1e2c;
   color: #e3e6f1;
   scroll-behavior: smooth;
 }
 
 .hero {
-  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  background: linear-gradient(135deg, #2d3a58, #435877);
   color: white;
   text-align: center;
   padding: 3rem 1rem;
@@ -24,7 +24,7 @@ body {
 .hero p {
   font-size: 1.25rem;
   margin-top: 0;
-  color: #d1d5ff;
+  color: #c2cbf0;
 }
 
 .container {
@@ -36,11 +36,11 @@ body {
 }
 
 .card {
-  background: #1f2937;
+  background: #252a40;
   border-radius: 20px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
   padding: 2rem;
-  border-left: 6px solid #818cf8;
+  border-left: 6px solid #7097f7;
   transition: transform 0.3s ease;
 }
 
@@ -60,7 +60,7 @@ body {
 .card p, .card ul {
   font-size: 1.05rem;
   line-height: 1.75;
-  color: #cbd5e1;
+  color: #d1d5ff;
 }
 
 .card ul li {
@@ -86,7 +86,7 @@ body {
 }
 
 .btn {
-  background-color: #6366f1;
+  background-color: #5865f2;
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 999px;
@@ -95,11 +95,11 @@ body {
   font-size: 1rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
   display: inline-block;
-  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 4px 10px rgba(88, 101, 242, 0.4);
 }
 
 .btn:hover {
-  background-color: #4f46e5;
+  background-color: #4752c4;
   transform: scale(1.05);
 }
 
@@ -139,4 +139,5 @@ select, option {
   max-width: 600px;
   border-radius: 16px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+  border: 2px solid #5865f2;
 }
