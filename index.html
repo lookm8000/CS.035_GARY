@@ -5,30 +5,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GARY – Generative AI Reviewer for You</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    nav {
+      background-color: #2d2d44;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav .links, nav .dropdown {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .dropdown select {
+      padding: 0.4rem;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .top-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem 0;
+      flex-wrap: wrap;
+    }
+
+    .top-buttons a {
+      background-color: #6366f1;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .top-buttons a:hover {
+      background-color: #4f46e5;
+    }
+
+    .group-photo {
+      display: block;
+      margin: 2rem auto;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+  </style>
 </head>
 <body>
+  <nav>
+    <div class="links">
+      <a href="https://github.com/Steve-Akiyama/CS-Capstone-Group-2" target="_blank">Repository</a>
+      <a href="https://github.com/Steve-Akiyama/CS-Capstone-Group-2/blob/main/README.md" target="_blank">README</a>
+      <a href="http://3.18.74.228:3000/" target="_blank">Live Demo</a>
+      <a href="/CS.035_GARY.pdf" target="_blank">Poster</a>
+    </div>
+    <div class="dropdown">
+      <label for="section-nav" style="color: white;">Jump to:</label>
+      <select id="section-nav" onchange="location.href=this.value">
+        <option value="#">-- Select Section --</option>
+        <option value="#project-identity">Project Identity</option>
+        <option value="#value-prop">Value Proposition</option>
+        <option value="#tech">Technical Implementation</option>
+        <option value="#usage">Access & Usage</option>
+        <option value="#video">Demo Video</option>
+        <option value="#contact">Contact</option>
+      </select>
+    </div>
+  </nav>
+
   <header class="hero">
     <h1>GARY</h1>
     <p>Generative AI Reviewer for You – Breaking Barriers in Traditional Learning</p>
   </header>
 
+  <img src="group_photo.jpeg" alt="Group Photo" class="group-photo" />
+
   <main class="container">
-    <section class="card">
+    <section class="card" id="project-identity">
       <h2>Project Identity</h2>
       <p><strong>Project Name:</strong> GARY (Generative AI Reviewer for You)</p>
       <p><strong>Team Members:</strong> Steve Akiyama, Maile Look, Varsha Narayan, Grant O’Connor</p>
       <p><strong>Project Timeline:</strong> Spring 2025 Capstone Project (In Progress)</p>
     </section>
 
-    <section class="card">
-      <h2> Value Proposition</h2>
+    <section class="card" id="value-prop">
+      <h2>Value Proposition</h2>
       <p><strong>Problem:</strong> Traditional assignments often lack adaptability, leading to disengagement and limited understanding.</p>
       <p><strong>Target Audience:</strong> University students and instructors in large general education courses.</p>
       <p><strong>Core Features:</strong> Personalized feedback, AI-generated follow-up questions, automated evaluation, academic source integration via RAG.</p>
       <p><strong>Why it’s better:</strong> Provides dynamic, real-time feedback and adapts to individual learning needs.</p>
     </section>
 
-    <section class="card">
+    <section class="card" id="tech">
       <h2>🛠️ Technical Implementation</h2>
       <ul>
         <li><strong>Frontend:</strong> React, HTML/CSS</li>
@@ -41,14 +123,14 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section class="card" id="usage">
       <h2>Access & Usage</h2>
-      <p><strong>Repo:</strong> <a href="https://github.com/lookm8000/CS.035_GARY" target="_blank">GitHub Repository</a></p>
+      <p><strong>Repo:</strong> <a href="https://github.com/Steve-Akiyama/CS-Capstone-Group-2" target="_blank">GitHub Repository</a></p>
       <p><strong>Instructions:</strong> Clone repo, install dependencies, and run FastAPI backend and React frontend. See README for full setup guide.</p>
       <p><strong>Documentation:</strong> Included in the repository with user guide and API reference.</p>
     </section>
 
-    <section class="video">
+    <section class="video" id="video">
       <h2>GARY in Action</h2>
       <li>http://3.18.74.228:3000/</li>
       <video controls>
@@ -57,7 +139,7 @@
       </video>
     </section>
 
-    <section class="card">
+    <section class="card" id="contact">
       <h2>📞 Contact Us</h2>
       <p>Steve Akiyama – <a href="mailto:akiyamas@oregonstate.edu">akiyamas@oregonstate.edu</a></p>
       <p>Maile Look – <a href="mailto:lookm@oregonstate.edu">lookm@oregonstate.edu</a></p>
@@ -66,7 +148,7 @@
     </section>
 
     <section class="card">
-      <h2> Acknowledgments</h2>
+      <h2>Acknowledgments</h2>
       <p>Special thanks to our mentor Joe Slade for his guidance and vision, and the OSU EECS Department for their ongoing support.</p>
     </section>
   </main>
