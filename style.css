@@ -1,111 +1,142 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1e1e2f;
-    color: #e0e0e0;
-  }
-  
-  .hero {
-    background-color: #2d2d44;
-    color: #ffffff;
-    text-align: center;
-    padding: 3rem 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .hero p {
-    font-size: 1.25rem;
-    margin-top: 0;
-    color: #cccccc;
-  }
-  
-  .container {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    display: grid;
-    gap: 2rem;
-  }
-  
-  .card {
-    background-color: #2a2a3d;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    padding: 2rem;
-    border-left: 4px solid #6366f1;
-  }
-  
-  .card h2 {
-    margin-top: 0;
-    color: #8ab4f8;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .card p, .card ul {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #cccccc;
-  }
-  
-  .card ul li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .video {
-    text-align: center;
-  }
-  
-  .video video {
-    width: 100%;
-    max-width: 700px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    background-color: #12121d;
-    padding: 0.5rem;
-  }
-  
-  .cta {
-    text-align: center;
-  }
-  
-  .btn {
-    background-color: #6366f1;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-    display: inline-block;
-  }
-  
-  .btn:hover {
-    background-color: #4f46e5;
-  }
-  
-  footer {
-    background-color: #2a2a3d;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    color: #999;
-    border-top: 1px solid #444;
-  }
-  
-  a {
-    color: #8ab4f8;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121826;
+  color: #e3e6f1;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-top: 0;
+  color: #d1d5ff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 2.5rem;
+}
+
+.card {
+  background: #1f2937;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-left: 6px solid #818cf8;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #a5b4fc;
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid #4f46e5;
+  padding-bottom: 0.4rem;
+}
+
+.card p, .card ul {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #cbd5e1;
+}
+
+.card ul li {
+  margin-bottom: 0.75rem;
+}
+
+.video {
+  text-align: center;
+}
+
+.video video {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+  background-color: #0f172a;
+  padding: 0.75rem;
+  border: 1px solid #334155;
+}
+
+.cta {
+  text-align: center;
+}
+
+.btn {
+  background-color: #6366f1;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+}
+
+.btn:hover {
+  background-color: #4f46e5;
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #1e293b;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  border-top: 1px solid #334155;
+}
+
+a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #60a5fa;
+}
+
+select, option {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  padding: 0.4rem;
+  border-radius: 8px;
+  background-color: #1e293b;
+  color: #e0e7ff;
+  border: 1px solid #475569;
+}
+
+.group-photo {
+  display: block;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
