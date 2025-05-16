@@ -9,10 +9,11 @@
     nav {
       background-color: #2d2d44;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       padding: 1rem;
       flex-wrap: wrap;
+      gap: 1rem;
     }
 
     nav .links, nav .dropdown {
@@ -22,9 +23,18 @@
     }
 
     nav a {
+      background-color: #5865f2;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
       color: white;
-      text-decoration: none;
       font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #4752c4;
     }
 
     .dropdown select {
@@ -33,33 +43,25 @@
       border: none;
     }
 
-    .top-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin: 1rem 0;
-      flex-wrap: wrap;
+    .group-photo-wrapper {
+      background-color: #252a40;
+      padding: 2rem;
+      border-radius: 16px;
+      max-width: 640px;
+      margin: 3rem auto;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+      border: 2px solid #5865f2;
     }
 
-    .top-buttons a {
-      background-color: #6366f1;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-
-    .top-buttons a:hover {
-      background-color: #4f46e5;
+    .group-photo-wrapper h2 {
+      text-align: center;
+      color: #a5b4fc;
+      margin-bottom: 1rem;
     }
 
     .group-photo {
       display: block;
-      margin: 2rem auto;
-      width: 90%;
-      max-width: 600px;
+      width: 100%;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
@@ -92,8 +94,6 @@
     <p>Generative AI Reviewer for You – Breaking Barriers in Traditional Learning</p>
   </header>
 
-  <img src="group_photo.jpeg" alt="Group Photo" class="group-photo" />
-
   <main class="container">
     <section class="card" id="project-identity">
       <h2>Project Identity</h2>
@@ -117,7 +117,7 @@
         <li><strong>Backend:</strong> Python, FastAPI, LangChain</li>
         <li><strong>Model:</strong> OpenAI GPT-4</li>
         <li><strong>Database:</strong> Qdrant (Vector Store)</li>
-        <li><strong>Infra:</strong> Docker, AWS EC2</li>
+        <li><strong>Hosting:</strong> Docker, AWS EC2</li>
         <li><strong>Collaboration:</strong> GitHub, JIRA</li>
         <li><strong>Unique Features:</strong> Retrieval-Augmented Generation (RAG)</li>
       </ul>
@@ -152,6 +152,11 @@
       <p>Special thanks to our mentor Joe Slade for his guidance and vision, and the OSU EECS Department for their ongoing support.</p>
     </section>
   </main>
+
+  <div class="group-photo-wrapper">
+    <h2> Meet the Team</h2>
+    <img src="group_photo.jpeg" alt="Group Photo" class="group-photo" />
+  </div>
 
   <footer>
     <p>© 2025 GARY Project – Oregon State University</p>
