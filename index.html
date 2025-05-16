@@ -6,6 +6,13 @@
   <title>GARY – Generative AI Reviewer for You</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1e1e2f;
+      color: #e5e7eb;
+    }
+
     nav {
       background-color: #2d2d44;
       display: flex;
@@ -43,16 +50,54 @@
       border: none;
     }
 
+    header.hero {
+      text-align: center;
+      padding: 2rem;
+      background-color: #252a40;
+    }
+
+    main.container {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section.card {
+      background-color: #2b2d3f;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    section.card h2 {
+      color: #a5b4fc;
+    }
+
+    .video video {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+
+    iframe {
+      border: none;
+      border-radius: 12px;
+      margin-top: 2rem;
+      width: 100%;
+      height: 800px;
+    }
+
     .team-contact-wrapper {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 2rem;
-      margin: 3rem auto;
-      max-width: 1100px;
+      margin-top: 3rem;
     }
 
-    .group-photo-wrapper, .contact-card {
+    .group-photo-wrapper,
+    .contact-card {
       flex: 1 1 45%;
       background-color: #252a40;
       padding: 2rem;
@@ -61,16 +106,7 @@
       border: 2px solid #5865f2;
     }
 
-    .group-photo-wrapper h2,
-    .contact-card h2,
-    .bio-card h3 {
-      text-align: center;
-      color: #a5b4fc;
-      margin-bottom: 1rem;
-    }
-
     .group-photo {
-      display: block;
       width: 100%;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -81,25 +117,36 @@
       border-radius: 12px;
       padding: 1rem;
       margin-bottom: 1rem;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .bio-card h3 {
+      color: #a5b4fc;
+    }
+
+    .bio-card p {
+      color: #cbd5e1;
+      font-size: 0.95rem;
     }
 
     .bio-card a {
       display: block;
-      color: #93c5fd;
       margin-top: 0.5rem;
+      color: #93c5fd;
       font-size: 0.95rem;
-      text-align: center;
     }
 
-    .bio-card p {
-      font-size: 0.95rem;
-      color: #cbd5e1;
+    footer {
       text-align: center;
+      padding: 1rem;
+      margin-top: 4rem;
+      background-color: #2d2d44;
+      color: #cbd5e1;
     }
   </style>
 </head>
 <body>
+
   <nav>
     <div class="links">
       <a href="https://github.com/Steve-Akiyama/CS-Capstone-Group-2" target="_blank">Repository</a>
@@ -131,19 +178,19 @@
       <h2>Project Identity</h2>
       <p><strong>Project Name:</strong> GARY (Generative AI Reviewer for You)</p>
       <p><strong>Team Members:</strong> Steve Akiyama, Maile Look, Varsha Narayan, Grant O’Connor</p>
-      <p><strong>Project Timeline:</strong> Spring 2025 Capstone Project (In Progress)</p>
+      <p><strong>Timeline:</strong> Spring 2025 Capstone Project (In Progress)</p>
     </section>
 
     <section class="card" id="value-prop">
       <h2>Value Proposition</h2>
       <p><strong>Problem:</strong> Traditional assignments often lack adaptability, leading to disengagement and limited understanding.</p>
       <p><strong>Target Audience:</strong> University students and instructors in large general education courses.</p>
-      <p><strong>Core Features:</strong> Personalized feedback, AI-generated follow-up questions, automated evaluation, academic source integration via RAG.</p>
-      <p><strong>Why it’s better:</strong> Provides dynamic, real-time feedback and adapts to individual learning needs.</p>
+      <p><strong>Core Features:</strong> Personalized feedback, AI-generated follow-up questions, automated evaluation, and academic source integration via RAG.</p>
+      <p><strong>Why It’s Better:</strong> Provides dynamic, real-time feedback tailored to individual learning needs.</p>
     </section>
 
     <section class="card" id="tech">
-      <h2> Technical Implementation</h2>
+      <h2>Technical Implementation</h2>
       <ul>
         <li><strong>Frontend:</strong> React, HTML/CSS</li>
         <li><strong>Backend:</strong> Python, FastAPI, LangChain</li>
@@ -151,74 +198,76 @@
         <li><strong>Database:</strong> Qdrant (Vector Store)</li>
         <li><strong>Hosting:</strong> Docker, AWS EC2</li>
         <li><strong>Collaboration:</strong> GitHub, JIRA</li>
-        <li><strong>Unique Features:</strong> Retrieval-Augmented Generation (RAG)</li>
+        <li><strong>Features:</strong> Retrieval-Augmented Generation (RAG)</li>
       </ul>
     </section>
 
     <section class="card" id="usage">
       <h2>Access & Usage</h2>
       <p><strong>Repo:</strong> <a href="https://github.com/Steve-Akiyama/CS-Capstone-Group-2" target="_blank">GitHub Repository</a></p>
-      <p><strong>Instructions:</strong> Clone repo, install dependencies, and run FastAPI backend and React frontend. See README for full setup guide.</p>
-      <p><strong>Documentation:</strong> Included in the repository with user guide and API reference.</p>
+      <p><strong>Instructions:</strong> Clone the repo, install dependencies, run the FastAPI backend and React frontend. See README for setup.</p>
+      <p><strong>Documentation:</strong> Included in repo with user guide and API reference.</p>
     </section>
 
-    <section class="video" id="video">
+    <section class="card video" id="video">
       <h2>GARY in Action</h2>
-      <li>http://3.18.74.228:3000/</li>
+      <p><strong>Live Demo:</strong> <a href="http://3.18.74.228:3000/" target="_blank">Launch App</a></p>
       <video controls>
         <source src="demo-gary.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </section>
+
+    <section class="card">
+      <h2>README Documentation</h2>
+      <iframe src="https://github.com/Steve-Akiyama/CS-Capstone-Group-2/blob/main/README.md"></iframe>
+      <!-- Replace with rendered or hosted HTML version if you want better formatting -->
+    </section>
+
+    <div class="team-contact-wrapper" id="contact">
+      <div class="group-photo-wrapper">
+        <h2>Meet the Team</h2>
+        <img src="group_photo.jpeg" alt="Group Photo" class="group-photo" />
+      </div>
+
+      <div class="contact-card">
+        <h2>📞 Contact Us</h2>
+        <div class="bio-card">
+          <h3>Maile Look</h3>
+          <p>BS Computer Science, BIS Minor – Graduating June 2025</p>
+          <a href="mailto:lookm@oregonstate.edu">lookm@oregonstate.edu</a>
+          <a href="https://www.linkedin.com/in/maile-look/" target="_blank">LinkedIn</a>
+        </div>
+        <div class="bio-card">
+          <h3>Steve Akiyama</h3>
+          <p>BS Computer Science (AI) – Graduating June 2025</p>
+          <a href="mailto:akiyamas@oregonstate.edu">akiyamas@oregonstate.edu</a>
+          <a href="https://www.linkedin.com/in/steven-akiyama-64783124a/" target="_blank">LinkedIn</a>
+        </div>
+        <div class="bio-card">
+          <h3>Grant O’Connor</h3>
+          <p>BS/MS Computer Science (AI) – Graduating 2027</p>
+          <a href="mailto:oconnorg@oregonstate.edu">oconnorg@oregonstate.edu</a>
+          <a href="https://www.linkedin.com/in/grant-o-connor-10b03826a/" target="_blank">LinkedIn</a>
+        </div>
+        <div class="bio-card">
+          <h3>Varsha Narayan</h3>
+          <p>BS Computer Science (Systems) – Graduating June 2026</p>
+          <a href="mailto:narayava@oregonstate.edu">narayava@oregonstate.edu</a>
+          <a href="https://www.linkedin.com/in/varsha-narayan-9002a6284/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="card">
+      <h2>Acknowledgments</h2>
+      <p>Special thanks to our mentor Joe Slade for his guidance and vision, and the OSU EECS Department for supporting our journey.</p>
+    </section>
   </main>
-<iframe src="https://your-hosted-site.com/readme.html" width="100%" height="800px"></iframe>
-
-  <div class="team-contact-wrapper">
-    <div class="group-photo-wrapper">
-      <h2> Meet the Team</h2>
-      <img src="group_photo.jpeg" alt="Group Photo" class="group-photo" />
-    </div>
-
-    <div class="contact-card" id="contact">
-      <h2>📞 Contact Us</h2>
-
-      <div class="bio-card">
-        <h3>Maile Look</h3>
-        <p>BS Computer Science major, Business Information Systems minor, graduating June 2025.</p>
-        <a href="mailto:lookm@oregonstate.edu">lookm@oregonstate.edu</a>
-        <a href="https://www.linkedin.com/in/maile-look/" target="_blank">LinkedIn</a>
-      </div>
-
-      <div class="bio-card">
-        <h3>Steve Akiyama</h3>
-        <p>BS Computer Science major (AI Focus), graduating June 2025.</p>
-        <a href="mailto:akiyamas@oregonstate.edu">akiyamas@oregonstate.edu</a>
-        <a href="https://www.linkedin.com/in/steven-akiyama-64783124a/" target="_blank">LinkedIn</a>
-      </div>
-
-      <div class="bio-card">
-        <h3>Grant O’Connor</h3>
-        <p>MS/BS Computer Science major (AI Focus), graduating 2027.</p>
-        <a href="mailto:oconnorg@oregonstate.edu">oconnorg@oregonstate.edu</a>
-        <a href="https://www.linkedin.com/in/grant-o-connor-10b03826a/" target="_blank">LinkedIn</a>
-      </div>
-
-      <div class="bio-card">
-        <h3>Varsha Narayan</h3>
-        <p>BS Computer Science major (Systems Option), graduating June 2026.</p>
-        <a href="mailto:narayava@oregonstate.edu">narayava@oregonstate.edu</a>
-        <a href="https://www.linkedin.com/in/varsha-narayan-9002a6284/" target="_blank">LinkedIn</a>
-      </div>
-    </div>
-  </div>
-
-  <section class="card">
-    <h2>Acknowledgments</h2>
-    <p>Special thanks to our mentor Joe Slade for his guidance and vision, and the OSU EECS Department for their ongoing support.</p>
-  </section>
 
   <footer>
     <p>© 2025 GARY Project – Oregon State University</p>
   </footer>
+
 </body>
 </html>
